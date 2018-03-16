@@ -42,8 +42,8 @@ public class StoreDatabase {
 	public List<Article> getByBrand(String brand){
 		
 		List<Article> byBrandList = allArticles.stream()
-									.filter(element -> element.getBrand().equals(brand))
-									.collect(Collectors.toList());
+					.filter(element -> element.getBrand().equals(brand))
+					.collect(Collectors.toList());
 		
 		return byBrandList;
 	}
@@ -51,8 +51,8 @@ public class StoreDatabase {
 	public List<Article> getByCategory(Category category){
 		
 		List<Article> byCategoryList = allArticles.stream()
-									   .filter(element -> element.getCategory().equals(category))
-				                       .collect(Collectors.toList());
+					.filter(element -> element.getCategory().equals(category))
+				        .collect(Collectors.toList());
 		
 		return byCategoryList;
 	}
