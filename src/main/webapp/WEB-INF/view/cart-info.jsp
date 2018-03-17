@@ -37,7 +37,7 @@
 	
 	<div id="main-column">
 	
-		<h2> Article has been added your cart </h2>
+		<h2> Article has been added to your cart </h2>
 		
 		<table>
 		
