@@ -8,7 +8,7 @@
 
 	<title>Smartphones</title>
 	
-	<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
+	<link href="/css/main.css" rel="stylesheet"/>
 
 </head>
 
