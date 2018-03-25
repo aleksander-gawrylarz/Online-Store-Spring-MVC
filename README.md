@@ -5,4 +5,4 @@ Featured products are displayed on the home page. Navigation menu is on the left
 You can display desired categories and filter products by brand, price etc. You can see summary of your cart with total price and
 remove items from cart.
 ##
-![animated-store](https://user-images.githubusercontent.com/32308481/37567215-e40f9b48-2ac3-11e8-83ea-7cd642be5240.gif)
+![store-21](https://user-images.githubusercontent.com/32308481/37875201-3d8a3b60-303c-11e8-86e3-61ec65ffb98b.JPG)
