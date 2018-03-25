@@ -15,7 +15,7 @@
 <body>
 
 	<header>
-		<h2>Welcome to myStore.pl</h2>
+		<p>Welcome to myStore.pl</p>
 	</header>
 	
 	<div id="sidenav">

@@ -15,7 +15,7 @@
 <body>
 
 	<header>
-		<h2>Welcome to myStore.pl</h2>
+		<p>Welcome to myStore.pl</p>
 	</header>
 
 	<div id="sidenav">
@@ -47,9 +47,9 @@
 		<h3>Price</h3>
 
 		<form action="/category/laptops-by-price">
-			<input type="text" name="minPrice" size="8" placeholder="min">
-			<input type="text" name="maxPrice" size="8" placeholder="max">
-			<input type="submit" value="Search">
+			<input type="text" id="text-field" name="minPrice" size="8" placeholder=" min">
+			<input type="text" id="text-field" name="maxPrice" size="8" placeholder=" max">
+			<input type="submit" id="button" value="Search">
 		</form>
 
 		<br>
