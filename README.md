@@ -8,4 +8,4 @@ You can:
 - Checkout and fill shipping form.
 - See summary of your order.
 ##
-![online-store](https://user-images.githubusercontent.com/32308481/37875722-80d47046-3043-11e8-921b-f82cda92cc82.gif)
+![store](https://user-images.githubusercontent.com/32308481/38778564-c8bad69c-40bb-11e8-9e06-c065e841acee.gif)
