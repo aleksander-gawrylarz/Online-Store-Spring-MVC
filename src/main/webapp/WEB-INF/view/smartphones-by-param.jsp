@@ -66,13 +66,18 @@
 				<th>Model</th>
 				<th>Screen Size</th>
 				<th>Price</th>
+				<th>Info</th>
 				<th>Action</th>
 			</tr>
 			
 			<c:forEach var="varItem" items="${smartphones}"> 
 			
-					<!-- construct "Add to Cart" link with Article id -->
+					<!-- construct link with Article id -->
 					<c:url var="addToCartLink" value="/cart-add">
+						<c:param name="ArticleId" value="${varItem.id}" />
+					</c:url>
+					
+					<c:url var="infoLink" value="/category/smartphone-info">
 						<c:param name="ArticleId" value="${varItem.id}" />
 					</c:url>
 			
@@ -81,8 +86,9 @@
 					<td>${varItem.brand}</td>
 					<td>${varItem.model}</td>
 					<td>${varItem.screenSize}</td>
-					<td>${varItem.price}</td>
-					<td><a href="${addToCartLink}">Add to Cart</a></td>
+					<td>${varItem.price} PLN</td>
+					<td><a href="${infoLink}">More Info</a></td>
+					<td><a id="x-smallStyleAddToCartLink" href="${addToCartLink}">Add to Cart</a></td>
 				</tr>
 				
 			</c:forEach>

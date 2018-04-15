@@ -2,6 +2,7 @@ package com.store.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -48,6 +49,12 @@ public class SmartphonesServiceImpl implements SmartphonesService {
 		screenSizeList.add("5.6\" - 6.2\"");
 		
 		return screenSizeList;
+	}
+
+	@Override
+	public Optional<Smartphone> getSmartphonesById(int id) {
+		
+		return smartphonesDAO.getSmartphonesById(id);
 	}
 
 }

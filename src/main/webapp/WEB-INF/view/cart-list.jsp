@@ -19,20 +19,15 @@
 	</header>
 
 	<div id="sidenav">
-	
-		<h2>Your Cart</h2>
-		
-		<nav>
-			<ul>
-				<li> <a href="/">Back to home page</a> </li>
-			</ul>
-		</nav>
+		<a id="styleLink" href="/">Back to home page</a>
 	</div>
 	
 	<div id="right-column">
 		<h3>My Cart</h3>
 		<p style="font-size: large"> Total price: </p>
-		<p style="font-size: large"> ${totalPrice} </p>
+		<p style="font-size: large"> ${totalPrice} PLN </p>
+		<br>
+		<button type="button" id="button" onclick="window.location.href='/checkout'">Checkout</button>
 	</div>
 	
 	<div id="main-column">
@@ -60,8 +55,8 @@
 					<td>${varItem.category}</td>
 					<td>${varItem.brand}</td>
 					<td>${varItem.model}</td>
-					<td>${varItem.price}</td>
-					<td><a href="${deleteLink}">Delete</a>
+					<td>${varItem.price} PLN</td>
+					<td><a id="x-smallStyleDeleteLink" href="${deleteLink}">Delete</a>
 				</tr>
 			</c:forEach>
 			

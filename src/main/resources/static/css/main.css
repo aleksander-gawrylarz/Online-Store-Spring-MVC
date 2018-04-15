@@ -99,9 +99,84 @@ table tr:nth-child(odd) {
 
 #button {
 	padding: 5px 10px;
-	border-radius: 10px;
-	background-color: #0074e8;
-	border: 2px solid #4646ff;
+	background-color: #f44336;
+	border: 2px solid #f44336;
 	color: white;
 	font-weight: bold;
+}
+
+#button:hover {
+	background-color: red;
+}
+
+#styleLink:link, #styleLink:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+#styleLink:hover, #styleLink:active {
+    background-color: red;
+}
+
+#styleAddToCartLink:link, #styleAddToCartLink:visited {
+    background-color: #00c600;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+#styleAddToCartLink:hover, #styleAddToCartLink:active {
+    background-color: #00b900;
+}
+
+#smallStyleAddToCartLink:link, #smallStyleAddToCartLink:visited {
+    background-color: #00c600;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#smallStyleAddToCartLink:hover, #smallStyleAddToCartLink:active {
+    background-color: #00b900;
+}
+
+
+#x-smallStyleAddToCartLink:link, #x-smallStyleAddToCartLink:visited {
+    background-color: #00c600;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#x-smallStyleAddToCartLink:hover, #x-smallStyleAddToCartLink:active {
+    background-color: #00b900;
+}
+
+#x-smallStyleDeleteLink:link, #x-smallStyleDeleteLink:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#x-smallStyleDeleteLink:hover, #x-smallStyleDeleteLink:active {
+    background-color: red;
+}
+
+a:hover {
+    color: #ff8040;
 }

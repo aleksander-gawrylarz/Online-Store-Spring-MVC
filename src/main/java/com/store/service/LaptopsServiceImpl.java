@@ -49,31 +49,23 @@ public class LaptopsServiceImpl implements LaptopsService {
 
 	@Override
 	public List<Laptop> getLaptopsByPrice(String minPrice, String maxPrice) {
-		
-		int min = 1;
-		int max = 0;
 
-		if (!minPrice.isEmpty() && !maxPrice.isEmpty()) {
-			if (Utility.numberOrNot(minPrice) && Utility.numberOrNot(maxPrice)) {
-				min = Integer.parseInt(minPrice);
-				max = Integer.parseInt(maxPrice);
-			}
-		} else if (minPrice.isEmpty() && !maxPrice.isEmpty()) {
-			if (Utility.numberOrNot(maxPrice)) {
-				min = 0;
-				max = Integer.parseInt(maxPrice);
-			}
-		} else {
-			if (Utility.numberOrNot(minPrice)) {
-				min = Integer.parseInt(minPrice);
-				max = Integer.MAX_VALUE;
-			}
+		int min = 0;
+		int max = Integer.MAX_VALUE;
+
+		if (minPrice == null)
+			minPrice = Integer.toString(min);
+		if (maxPrice == null)
+			maxPrice = Integer.toString(max);
+
+		if (Utility.numberOrNot(minPrice) && Utility.numberOrNot(maxPrice)) {
+			min = Integer.parseInt(minPrice);
+			max = Integer.parseInt(maxPrice);
 		}
 
 		if (min >= 0 && max >= 0 && min <= max) {
 			return laptopsDAO.getLaptopsByPrice(min, max);
 		} else
-
 			return laptopsDAO.getLaptops();
 	}
 }

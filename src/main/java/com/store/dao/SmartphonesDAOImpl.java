@@ -1,6 +1,7 @@
 package com.store.dao;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,14 @@ public class SmartphonesDAOImpl implements SmartphonesDAO {
 				.map(element -> (Smartphone)element)
 				.filter(element -> (element.getScreenSize() >= min && element.getScreenSize() <= max))
 				.collect(Collectors.toList());
+	}
+
+	@Override
+	public Optional<Smartphone> getSmartphonesById(int id) {
+		return storeDatabase.getAllArticles().stream()
+				.filter(element -> element instanceof Smartphone)
+				.map(element -> (Smartphone)element)
+				.filter(element -> element.getId() == id).findFirst();
 	}
 
 }

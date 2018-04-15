@@ -12,7 +12,7 @@ public interface LaptopsDAO {
 	public List<Laptop> getLaptopsByBrand(String searchedBrand);
 		
 	public Optional<Laptop> getLaptopsById(int id);
-
+	
 	public List<Laptop> getLaptopsByPrice(int min, int max);
 
 }

@@ -49,6 +49,7 @@
 		<form action="/category/laptops-by-price">
 			<input type="text" id="text-field" name="minPrice" size="8" placeholder=" min">
 			<input type="text" id="text-field" name="maxPrice" size="8" placeholder=" max">
+			<br><br>
 			<input type="submit" id="button" value="Search">
 		</form>
 		
@@ -73,13 +74,18 @@
 				<th>Brand</th>
 				<th>Model</th>
 				<th>Price</th>
+				<th>Info</th>
 				<th>Action</th>
 			</tr>
 			
 			<c:forEach var="varItem" items="${laptops}"> 
 			
-					<!-- construct "Add to Cart" link with Article id -->
+					<!-- construct link with Article id -->
 					<c:url var="addToCartLink" value="/cart-add">
+						<c:param name="ArticleId" value="${varItem.id}" />
+					</c:url>
+					
+					<c:url var="infoLink" value="/category/laptop-info">
 						<c:param name="ArticleId" value="${varItem.id}" />
 					</c:url>
 			
@@ -87,8 +93,9 @@
 					<td>${varItem.id}</td>
 					<td>${varItem.brand}</td>
 					<td>${varItem.model}</td>
-					<td>${varItem.price}</td>
-					<td><a href="${addToCartLink}">Add to Cart</a></td>
+					<td>${varItem.price} PLN</td>
+					<td><a href="${infoLink}">More Info</a></td>
+					<td><a id="x-smallStyleAddToCartLink" href="${addToCartLink}">Add to Cart</a></td>
 				</tr>
 				
 			</c:forEach>

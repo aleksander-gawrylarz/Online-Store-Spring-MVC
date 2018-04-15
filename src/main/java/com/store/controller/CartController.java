@@ -26,7 +26,7 @@ public class CartController {
 		
 		return "cart-list";
 	}
-	
+
 	@GetMapping("/cart-delete")
 	public String deleteArticleFromCart(@RequestParam("ArticleId") int id) {
 		
@@ -39,10 +39,10 @@ public class CartController {
 		
 		myCart.getAllItemsInCart().add(cartService.getArticleById(id));
 		
-		model.addAttribute("totalPrice", cartService.totalPrice());
 		model.addAttribute("cartItems", cartService.getCartItems());
-		
-		return "cart-info";
+		model.addAttribute("totalPrice", cartService.totalPrice());
+
+		return "cart-list";
 	}
 	
 }

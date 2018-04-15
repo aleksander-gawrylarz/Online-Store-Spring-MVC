@@ -52,7 +52,7 @@
 						<c:param name="ArticleId" value="${varItem.id}" />
 					</c:url>
 				<tr>
-					<td>${varItem.brand} ${varItem.model}<br>Price ${varItem.price} PLN<br><a href="${addToCartLink}">Add to Cart</a></td>
+					<td>${varItem.brand} ${varItem.model}<br>Price ${varItem.price} PLN<br><a id="smallStyleAddToCartLink" href="${addToCartLink}">Add to Cart</a></td>
 				</tr>
 			</c:forEach>
 			

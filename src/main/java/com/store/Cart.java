@@ -19,8 +19,12 @@ public class Cart {
 		return itemsInCart;
 	}
 	
-	public void deleteArticleById(int id) {
-		itemsInCart.removeIf(element -> element.get().getId() == id);
+	public boolean deleteArticleById(int id) {
+		for(Optional<Article> a : itemsInCart)
+			if (a.get().getId() == id) {
+				itemsInCart.remove(a);
+			return true;	
+			}
+		return false;
 	}
-	
 }
