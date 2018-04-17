@@ -1,5 +1,5 @@
 # Online-Store-Spring-MVC
-### Online-store website made using Spring Web MVC
+### Online-store web application made using Spring MVC, Java, JSP, HTML, CSS
 ##
 On the website you can:
 - Browse and filter products.
